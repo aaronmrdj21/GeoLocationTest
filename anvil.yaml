@@ -1,5 +1,20 @@
 allow_embedding: false
 package_name: Material_Design_2
+db_schema:
+  locations:
+    client: none
+    server: full
+    columns:
+    - name: Location_name
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: Latitude
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: Longtitude
+      admin_ui: {width: 200, order: 2}
+      type: number
+    title: locations
 name: Material Design 2
 startup_form: Form1
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
@@ -8,5 +23,5 @@ services:
   client_config: {}
   server_config: {}
 - source: /runtime/services/google.yml
-  client_config: {}
+  client_config: {api_key: AIzaSyAlbw7Og6oMLiS3LiLbvGvwLFWYDJgZWVY}
   server_config: {}

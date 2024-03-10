@@ -1,0 +1,29 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: primary_color_1
+    properties: {text: Find my Location, role: primary-color}
+    type: Button
+    layout_properties: {grid_position: 'TPDNWL,CNSEMB'}
+    event_bindings: {click: primary_color_1_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components: []
+- name: label_1
+  properties: {text: FIND CURRENT LOCATION}
+  type: Label
+  layout_properties: {slot: title}
+- name: button_1
+  properties: {text: Back}
+  type: Button
+  layout_properties: {slot: left-nav}
+  event_bindings: {click: button_1_click}
