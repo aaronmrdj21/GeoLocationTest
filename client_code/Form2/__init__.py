@@ -15,7 +15,7 @@ class Form2(Form2Template):
 
     # Any code you write here will run before the form opens.
 
-  def primary_color_1_click(self, **event_args):
+  def GET_IP_Button_click(self, **event_args):
     """This method is called when the button is clicked"""
     ip_address = anvil.server.call('get_ip_address')
     print(ip_address)
