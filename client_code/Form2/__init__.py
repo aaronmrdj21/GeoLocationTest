@@ -17,8 +17,9 @@ class Form2(Form2Template):
 
   def primary_color_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    navigator.geolocation.getCurrentPosition(lambda p: self.set_location(p.coords.latitude, p.coords.longitude))
-    self.location_button.enabled = False
+    ip_address = anvil.server.call('get_ip_address')
+    print(ip_address)
+    
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
